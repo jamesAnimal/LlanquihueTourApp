@@ -1,20 +1,18 @@
-package data;
+package com.llanquihuetour.data;
 
-// Importaciones.
-import model.Tour;
+import com.llanquihuetour.model.Tour;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Clase encargada de leer el archivo .txt y agregarlos a una lista dinámica de objetos.
+ * Clase que gestiona los datos de un archivo .txt.
  */
 public class GestorDatos {
 
     /**
-     * Método principal que se encarga de abrir un archivo, procesarlo y retornar una
-     * lista dinámica de objetos con los datos obtenidos del archivo
+     * Metodo que abre el archivo, procesa cada línea y retorna una lista dinámica con los objetos creados.
      * @param rutaArchivo Ruta del archivo .txt.
      * @return Lista dinámica de objetos.
      */
@@ -22,11 +20,10 @@ public class GestorDatos {
 
         ArrayList<Tour> listaDeTours = new ArrayList<>();
 
-        // Try with resources que lee el archivo, si falla la lectura cierra el proceso de manera segura y lanza el error.
+        // Abre y lee el archivo, manejando errores de lectura de forma segura.
         try (BufferedReader bufRed = new BufferedReader(new FileReader(rutaArchivo))) {
 
-            // Ciclo que lee línea por línea el archivo, separa los datos con .split los agrega a diferentes variables
-            // cambiando el tipo de variable si es necesario con .parse.
+            // Lee el archivo línea por línea, separa los datos y los convierte a sus tipos correspondientes.
             String linea;
             while ((linea = bufRed.readLine()) != null) {
 
@@ -40,7 +37,7 @@ public class GestorDatos {
                     String lugar = partes[3].trim();
                     double valor = Double.parseDouble(partes[4].trim());
 
-                    // Aquí se agregan los datos a un objeto y luego el objeto se agrega a la lista dinámica de objetos.
+                    // Crea el objeto Tour y lo agrega a la lista dinámica.
                     Tour tour = new Tour(codigo, nombre, tipoTour, lugar, valor);
                     listaDeTours.add(tour);
 

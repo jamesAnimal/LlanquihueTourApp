@@ -1,39 +1,71 @@
-# Construyendo una lista de objetos desde archivo – Desarrollo Orientado a Objetos I
+![Duoc UC](https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png)
 
-## Autor del proyecto
-* **Nombre completo:** Jaime Seguel Retamales.
-* **Sección:** Desarrollo Orientado a Objetos I, sección 005A.
-* **Carrera:** Analista Programador.
-* **Sede:** Online.
+# 💻 Organización modular y creación de una librería personalizada – Desarrollo Orientado a Objetos I
 
-## Descripción general del sistema
-Este proyecto corresponde a la Actividad Formativa de la Semana 4 para la asignatura de Desarrollo Orientado a Objetos I.
+---
 
-Esta aplicación de consola en Java gestiona los registros de la agencia de turismo "Llanquihue Tour". El sistema lee datos de tours desde un archivo externo (tours.txt), convierte cada registro en un objeto de tipo `Tour` y los almacena en una colección dinámica (ArrayList). Finalmente, recorre la lista y aplica filtros de categoría (Naturaleza) y precio (Económicos y Premium), mostrando los resultados organizados en la consola.
+## 👤 Autor del proyecto
+- **Nombre completo:** Jaime Seguel Retamales.
+- **Sección:** Desarrollo Orientado a Objetos I, sección 005A.
+- **Carrera:** Analista Programador.
+- **Sede:** Online.
 
-## Estructura general del proyecto
-```text
-📁 src/
-├── data/
-│   └── GestorDatos.java  # Clase encargada de leer el archivo .txt y agregarlos a una lista dinámica de objetos.
-├── model/
-│   └── Tour.java         # Clase modelo para crear objetos de tipo Tour.
-└── app/
-    └── Main.java         # Clase principal que contiene la lógica del programa.
+---
 
-📁 resources/
-└── tours.txt             # Archivo de texto con los registros de los tours.
+## 📘 Descripción general del sistema
+Este proyecto corresponde a la Evaluación Sumativa de la Semana 5 para la asignatura de *Desarrollo Orientado a Objetos I*.
+
+Esta aplicación de consola en Java modela y gestiona la información de las personas vinculadas a la agencia de turismo "Llanquihue Tour" (Clientes, Empleados y Asociados) aplicando principios de herencia y composición. Además, carga de forma dinámica una lista de tours desde un archivo externo (tours.txt) a una colección ArrayList, aplicando filtros de categoría y precio en consola, todo organizado modularmente en paquetes.
+
+---
+
+## 🧱 Estructura general del proyecto
+
+```plaintext
+📁 src/main/java/
+└── com/llanquihuetour/
+    ├── app/          # Paquete para la clase principal main.
+    │   └── Main.java
+    ├── data/         # Paquete para clases de lectura, procesamiento y persistencia de datos externos.
+    │   └── GestorDatos.java
+    ├── model/        # Paquete para las clases de dominio que definen la estructura y comportamiento de los objetos.
+    │   ├── Persona.java
+    │   ├── Direccion.java
+    │   ├── Cliente.java
+    │   ├── Empleado.java
+    │   ├── Asociado.java
+    │   └── Tour.java
+    └── util/         # Paquete para utilidades, validaciones y excepciones personalizadas.
+        ├── ValidadorRut.java
+        ├── RutInvalidoException.java
+        └── BuscadorTours.java
+
+📁 src/main/resources/     # Carpeta para archivos de configuración, recursos y datos del programa.
+└── tours.txt
 ```
 
-## Instrucciones para clonar y ejecutar el proyecto
+---
 
-### 1. Clonar el repositorio
-Clona el repositorio desde GitHub ejecutando el siguiente comando en la terminal:
+## ⚙️ Instrucciones para clonar y ejecutar el proyecto
+
+**1.** **Clona el repositorio desde GitHub**
 ```bash
-git clone https://github.com/jamesAnimal/llanquihue-tour.git
+git clone https://github.com/jamesAnimal/llanquihue-tour-2.0.git
 ```
 
-### 2. Ejecutar en el IDE
-1. Abre el proyecto en IntelliJ IDEA (o el IDE de tu preferencia).
-2. Navega hasta el paquete app y ejecuta el archivo Main.java.
-3. El programa cargará los tours automáticamente del archivo y mostrará los resultados filtrados en la consola.
+**2.** **Abre el proyecto en IntelliJ IDEA.**
+
+**3.** **Verifica que los archivos .txt estén correctamente ubicados.**
+
+**4.** **Ejecuta el archivo Main.java desde el paquete app.**
+
+**5.** **Sigue las instrucciones en consola o en la interfaz gráfica (si corresponde).**
+
+---
+
+**Repositorio GitHub:** [https://github.com/jamesAnimal/llanquihue-tour-2.0](https://github.com/jamesAnimal/llanquihue-tour-2.0)
+**Fecha de entrega:** 22/06/2026
+
+---
+
+© Duoc UC | Escuela de Informática y Telecomunicaciones | Desarrollo Orientado a Objetos I | Evaluación Sumativa Semana 5

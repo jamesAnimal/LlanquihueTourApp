@@ -1,11 +1,11 @@
-package model;
+package com.llanquihuetour.model;
+
 
 /**
- * Clase modelo para crear objetos de tipo Tour.
+ * Clase que define la estructura y atributos de los objetos de tipo Tour.
  */
 public class Tour {
 
-    // Atributos del objeto tour.
     private int codigo;
     private String nombre;
     private String tipoTour;
@@ -13,7 +13,7 @@ public class Tour {
     private double valor;
 
     /**
-     * Constructor sin parámetros para instanciar un objeto "en blanco".
+     * Constructor que inicializa el objeto con datos vacíos por defecto para luego ser rellenados.
      */
     public Tour() {
         this.codigo = 0;
@@ -25,7 +25,7 @@ public class Tour {
     }
 
     /**
-     * Constructor con parámetros para instanciar un objeto ingresando los parámetros directo en el constructor.
+     * Constructor que inicializa un objeto ingresando los parámetros directamente.
      * @param codigo Código del tour.
      * @param nombre Nombre del tour.
      * @param tipoTour Tipo del tour.
@@ -40,7 +40,7 @@ public class Tour {
         this.valor = valor;
     }
 
-    // Métodos Getter y Setter para poder obtener y modificar parámetros encapsulados.
+    // Define los métodos Getter y Setter para obtener y modificar los parámetros encapsulados.
     public int getCodigo() {
         return codigo;
     }
@@ -81,10 +81,10 @@ public class Tour {
         this.valor = valor;
     }
 
-    // Método que ordena y da formato a la información del objeto para ser mostrada por consola.
+    // Formatea y retorna la información del objeto para mostrarla por consola.
     @Override
     public String toString() {
-        return "Codigo: " + codigo + "\n" +
+        return "Código: " + codigo + "\n" +
                 "Nombre: " + nombre + "\n" +
                 "Tipo de tour: " + tipoTour + "\n" +
                 "Lugar: " + lugar + "\n" +
