@@ -1,0 +1,6 @@
+101;Atardecer en el Morro;Historico;Morro de Arica;15000
+102;Aventura Costera Anzota;Naturaleza;Cuevas de Anzota;20000
+103;Ruta de las Aceitunas;Gastronomico;Valle de Azapa;35000
+104;Altiplano y Lago Chungara;Naturaleza;Parque Nacional Lauca;45000
+105;City Tour Historico Arica;Cultural;Centro de Arica;18000
+106;Avistamiento de Aves Lluta;Naturaleza;Humedal Rio Lluta;22000
