@@ -3,6 +3,7 @@ package com.llanquihuetour.model;
 /**
  * Clase que se extiende de la clase Persona para definir los métodos y atributos de un objeto empleado.
  * @author Jaime Seguel.
+ * @since Semana 3
  */
 public class Empleado extends Persona {
 
@@ -39,7 +40,7 @@ public class Empleado extends Persona {
         this.sueldo = sueldo;
     }
 
-    // Define los métodos setters y getters para crear el flujo de datos con los atributos privados.
+    // Métodos setters y getters para crear el flujo de datos con los atributos privados.
     public String getCargo() {
         return cargo;
     }
@@ -64,7 +65,10 @@ public class Empleado extends Persona {
         this.sueldo = sueldo;
     }
 
-    // Formatea y retorna los atributos de la clase para mostrarlos por consola.
+    /**
+     * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
+     * @return Texto formateado con los datos del servicio.
+     */
     @Override
     public String toString() {
 

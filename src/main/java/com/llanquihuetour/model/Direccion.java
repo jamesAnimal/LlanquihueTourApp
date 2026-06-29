@@ -3,6 +3,7 @@ package com.llanquihuetour.model;
 /**
  * Clase que define y maneja los datos de la dirección de una persona.
  * @author Jaime Seguel.
+ * @since Semana 3
  */
 public class Direccion {
 
@@ -37,7 +38,7 @@ public class Direccion {
         this.region = region;
     }
 
-    // Define los métodos setters y getters para crear el flujo de datos con los atributos privados.
+    // Métodos setters y getters para crear el flujo de datos con los atributos privados.
     public String getCalle() {
         return calle;
     }
@@ -70,7 +71,10 @@ public class Direccion {
         this.region = region;
     }
 
-    // Formatea y retorna los atributos de la clase para mostrarlos por consola.
+    /**
+     * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
+     * @return Texto formateado con los datos del servicio.
+     */
     @Override
     public String toString() {
 

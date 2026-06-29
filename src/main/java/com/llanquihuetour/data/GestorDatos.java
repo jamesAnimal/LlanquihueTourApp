@@ -8,11 +8,13 @@ import java.util.ArrayList;
 
 /**
  * Clase que gestiona los datos de un archivo .txt.
+ * @author Jaime Seguel.
+ * @since Semana 4
  */
 public class GestorDatos {
 
     /**
-     * Metodo que abre el archivo, procesa cada línea y retorna una lista dinámica con los objetos creados.
+     * Método que abre el archivo, procesa cada línea y retorna una lista dinámica con los objetos creados.
      * @param rutaArchivo Ruta del archivo .txt.
      * @return Lista dinámica de objetos.
      */

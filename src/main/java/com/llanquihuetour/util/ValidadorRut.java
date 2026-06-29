@@ -3,6 +3,7 @@ package com.llanquihuetour.util;
 /**
  * Clase para validar el formato del Rut.
  * @author Jaime Seguel.
+ * @since Semana 3
  */
 public class ValidadorRut {
 

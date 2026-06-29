@@ -1,6 +1,6 @@
-101;Atardecer en el Morro;Historico;Morro de Arica;15000
-102;Aventura Costera Anzota;Naturaleza;Cuevas de Anzota;20000
-103;Ruta de las Aceitunas;Gastronomico;Valle de Azapa;35000
-104;Altiplano y Lago Chungara;Naturaleza;Parque Nacional Lauca;45000
-105;City Tour Historico Arica;Cultural;Centro de Arica;18000
-106;Avistamiento de Aves Lluta;Naturaleza;Humedal Rio Lluta;22000
+101;Atardecer en el Lago;Histórico;Lago Llanquihue;15000
+102;Navegación Saltos del Petrohue;Naturaleza;Lago Todos los Santos;25000
+103;Ruta del Kuchen y Repostería;Gastronómico;Frutillar;18000
+104;Ascension Volcan Osorno;Naturaleza;Parque Vicente Perez Rosales;45000
+105;City Tour Historico Llanquihue;Cultural;Centro de Llanquihue;12000
+106;Avistamiento en Humedal Maullin;Naturaleza;Humedal de Maullin;22000

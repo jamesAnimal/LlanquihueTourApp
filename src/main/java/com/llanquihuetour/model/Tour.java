@@ -3,6 +3,8 @@ package com.llanquihuetour.model;
 
 /**
  * Clase que define la estructura y atributos de los objetos de tipo Tour.
+ * @author Jaime Seguel.
+ * @since Semana 4
  */
 public class Tour {
 
@@ -81,7 +83,10 @@ public class Tour {
         this.valor = valor;
     }
 
-    // Formatea y retorna la información del objeto para mostrarla por consola.
+    /**
+     * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
+     * @return Texto formateado con los datos del servicio.
+     */
     @Override
     public String toString() {
         return "Código: " + codigo + "\n" +

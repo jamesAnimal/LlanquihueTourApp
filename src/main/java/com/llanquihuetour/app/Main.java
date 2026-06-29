@@ -8,30 +8,31 @@ import com.llanquihuetour.model.Direccion;
 import com.llanquihuetour.model.Empleado;
 import com.llanquihuetour.util.RutInvalidoException;
 import com.llanquihuetour.util.BuscadorTours;
+import com.llanquihuetour.data.GestorServicios;
+import com.llanquihuetour.model.ServicioTuristico;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Clase principal que contiene la lógica del programa.
+ * @author Jaime Seguel.
+ * @since Semana 3, 4, 5 y 6.
  */
 public class Main {
 
     /**
-     * Método principal que inicia y ejecuta la lógica.
+     * Método principal que inicia y ejecuta la lógica de la app.
      * @param args
      */
     public static void main(String[] args) {
-
-        // Llama a la clase GestorDatos para leer el archivo .txt y guarda la lectura en una lista dinámica de objetos.
-        GestorDatos gestor = new GestorDatos();
-        ArrayList<Tour> listaTours = gestor.leerArchivo("src/main/resources/tours.txt");
+/*
+        // ==========================================
+        // SEMANA 3: Registro de Personal y Clientes
+        // ==========================================
 
         // Llama al Scanner.
         Scanner scan = new Scanner(System.in);
-
-        // Ejecuta la búsqueda interactiva de tours usando la clase BuscadorTours.
-        BuscadorTours.buscarTours(listaTours, scan);
 
         // Inicializa el objeto empleado1 con el constructor completo.
         Direccion direccionEmpleado = new Direccion("Calle Principal", "#1234", "Santiago", "Reg. Metropolitana");
@@ -43,8 +44,8 @@ public class Main {
 
         direccionAsociado.setCalle("Calle Secundaria");
         direccionAsociado.setNumero("#2345");
-        direccionAsociado.setCiudad("Arica");
-        direccionAsociado.setRegion("Reg. Arica y Parinacota");
+        direccionAsociado.setCiudad("Puerto Varas");
+        direccionAsociado.setRegion("Reg. de Los Lagos");
 
         asociado1.setServicio("Transporte");
         asociado1.setTarifa(200000);
@@ -53,7 +54,7 @@ public class Main {
         asociado1.setFono("+56998768765");
         asociado1.setDireccion(direccionAsociado);
 
-        // Valida el RUT del asociado utilizando un bloque try-catch.
+        // Válida el RUT del asociado utilizando un bloque try-catch.
         try {
             asociado1.setRut("14123456-4");
 
@@ -115,6 +116,32 @@ public class Main {
 
         cliente1.setDireccion(direccionCliente);
 
+        // Imprime los datos almacenados.
+        System.out.println("\n----- DATOS ALMACENADOS EXITOSAMENTE -----\n");
+
+        System.out.println(empleado1.toString());
+
+        System.out.println(asociado1.toString());
+
+        System.out.println(cliente1.toString());
+
+
+        // ==========================================
+        // SEMANA 4: Carga de Tours desde Archivo
+        // ==========================================
+
+        // Llama a la clase GestorDatos para leer el archivo .txt y guarda la lectura en una lista dinámica de objetos.
+        GestorDatos gestor = new GestorDatos();
+        ArrayList<Tour> listaTours = gestor.leerArchivo("src/main/resources/tours.txt");
+
+
+        // ==========================================
+        // SEMANA 5: Búsqueda Interactiva y Contratación
+        // ==========================================
+
+        // Ejecuta la búsqueda interactiva de tours usando la clase BuscadorTours.
+        BuscadorTours.buscarTours(listaTours, scan);
+
         // Muestra los tours cargados para que el usuario elija un código y lo asocie al cliente.
         System.out.println("\nTours disponibles para contratar:");
 
@@ -138,16 +165,36 @@ public class Main {
             }
         }
 
-
-        // Imprime los datos almacenados.
-        System.out.println("\n----- DATOS ALMACENADOS EXITOSAMENTE -----\n");
-
-        System.out.println(empleado1.toString());
-
-        System.out.println(asociado1.toString());
+        // Imprime los datos de contratación actualizados.
+        System.out.println("\n----- DATOS DE CONTRATACIÓN ACTUALIZADOS (SEMANA 5) -----\n");
 
         System.out.println(cliente1.toString());
 
         scan.close();
+
+*/
+        // ==========================================
+        // SEMANA 6: Servicios Turísticos Especializados
+        // ==========================================
+
+        // Se crea un objeto de GestorServicios para poder llamar al método crearServiciosTuristicos.
+        GestorServicios gestorServicios = new GestorServicios();
+
+        // Se crea una lista para guardar lo que retorna el método crearServiciosTuristicos.
+        ArrayList<ServicioTuristico> listaDeServicios = gestorServicios.crearServiciosTuristicos();
+
+        // Se recorre la lista y se imprimen los tours uno por uno.
+        System.out.println("\n" + "=====Servicios Turisticos=====" + "\n");
+
+        for (ServicioTuristico servicio : listaDeServicios) {
+            System.out.println("Promoción: " + servicio.promocionServicio());
+
+            System.out.println(servicio + "\n");
+
+        }
+
+
+
+
     }
 }

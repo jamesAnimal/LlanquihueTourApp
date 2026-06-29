@@ -3,6 +3,7 @@ package com.llanquihuetour.model;
 /**
  * Clase que se extiende de la clase Persona para definir los métodos y atributos de un objeto asociado.
  * @author Jaime Seguel.
+ * @since Semana 3
  */
 public class Asociado extends Persona {
 
@@ -39,7 +40,7 @@ public class Asociado extends Persona {
         this.observaciones = observaciones;
     }
 
-    // Define los métodos setters y getters para crear el flujo de datos con los atributos privados.
+    // Métodos setters y getters para crear el flujo de datos con los atributos privados.
     public String getServicio() {
         return servicio;
     }
@@ -64,7 +65,10 @@ public class Asociado extends Persona {
         this.observaciones = observaciones;
     }
 
-    // Formatea y retorna los atributos de la clase para mostrarlos por consola.
+    /**
+     * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
+     * @return Texto formateado con los datos del servicio.
+     */
     @Override
     public String toString() {
 

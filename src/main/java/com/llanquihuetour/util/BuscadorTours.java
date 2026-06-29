@@ -6,11 +6,13 @@ import java.util.Scanner;
 
 /**
  * Clase para buscar tours por etiquetas.
+ * @author Jaime Seguel.
+ * @since Semana 5
  */
 public class BuscadorTours {
 
     /**
-     * Metodo para buscar tours filtrados por etiquetas ingresadas por consola.
+     * Método para buscar tours filtrados por etiquetas ingresadas por consola.
      */
     public static void buscarTours(ArrayList<Tour> listaTours, Scanner scan) {
 
