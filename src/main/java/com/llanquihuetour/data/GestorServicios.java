@@ -4,6 +4,7 @@ import com.llanquihuetour.model.ServicioTuristico;
 import com.llanquihuetour.model.RutaGastronomica;
 import com.llanquihuetour.model.PaseoLacustre;
 import com.llanquihuetour.model.ExcursionCultural;
+import java.util.List;
 import java.util.ArrayList;
 
 /**
@@ -17,8 +18,8 @@ public class GestorServicios {
      * Crea e inicializa una lista con los distintos servicios turísticos que ofrece la agencia.
      * @return Lista de servicios turísticos.
      */
-    public ArrayList<ServicioTuristico> crearServiciosTuristicos() {
-        ArrayList<ServicioTuristico> serviciosTuristicos = new ArrayList<>();
+    public List<ServicioTuristico> crearServiciosTuristicos() {
+        List<ServicioTuristico> serviciosTuristicos = new ArrayList<>();
 
         serviciosTuristicos.add(new RutaGastronomica(101, "Ruta del Kuchen y Café", 3.5, "Puerto Varas",
                 25000.0, 4, true, "Apto para Celíacos"));

@@ -25,7 +25,7 @@ public class Asociado extends Persona {
     /**
      * Constructor para inicializar el objeto con los datos agregados directamente.
      * @param servicio Servicio que entrega el asociado.
-     * @param tarifa Tarifa del servicio del asociado
+     * @param tarifa Tarifa del servicio del asociado.
      * @param observaciones Observaciones sobre el servicio del asociado.
      * @param nombre Nombre del asociado.
      * @param rut Rut del asociado.
@@ -67,7 +67,7 @@ public class Asociado extends Persona {
 
     /**
      * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
-     * @return Texto formateado con los datos del servicio.
+     * @return Texto formateado con los datos del asociado.
      */
     @Override
     public String toString() {

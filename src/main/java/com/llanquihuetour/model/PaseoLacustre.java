@@ -77,6 +77,23 @@ public class PaseoLacustre extends ServicioTuristico {
                 super.getComuna() + " en un(a) " + tipoEmbarcacion + ".";
     }
 
+    /**
+     * Método para mostrar la información completa de un servicio turístico tipo Paseo Lacustre.
+     */
+    @Override
+    public void mostrarInformacion() {
+
+        System.out.println("===Paseo Lacustre===");
+        System.out.println("Código: " + getCodigo());
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Duración Horas: " + getDuracionHoras());
+        System.out.println("Comuna: " + getComuna());
+        System.out.println("Precio: " + getPrecio());
+        System.out.println("Tipo Embarcación: " + getTipoEmbarcacion());
+        System.out.println("Capacidad de Pasajeros: " + getCapacidadPasajeros());
+        System.out.println("Permite Pescar: " + isPermitePescar());
+
+    }
 
     /**
      * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.

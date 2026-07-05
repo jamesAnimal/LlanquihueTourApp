@@ -92,6 +92,20 @@ public class ServicioTuristico {
     }
 
     /**
+     * Método para mostrar la información completa de un servicio turístico general.
+     */
+    public void mostrarInformacion() {
+
+        System.out.println("===Servicio Turístico===");
+        System.out.println("Código: " + codigo);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Duración en horas: " + duracionHoras);
+        System.out.println("Comuna en donde se desarrolla: " + comuna);
+        System.out.println("Precio: " + precio);
+
+    }
+
+    /**
      * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
      * @return Texto formateado con los datos del servicio.
      */

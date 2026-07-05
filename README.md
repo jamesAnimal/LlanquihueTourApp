@@ -1,6 +1,6 @@
 ![Duoc UC](https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png)
 
-# 💻 Creando jerarquías de clases con herencia simple – Desarrollo Orientado a Objetos I
+# 💻 Aplicando polimorfismo y colecciones genéricas – Desarrollo Orientado a Objetos I
 
 ---
 
@@ -13,11 +13,11 @@
 ---
 
 ## 📘 Descripción general del sistema
-Este proyecto corresponde a la Actividad Formativa de la Semana 6, la cual representa el desarrollo incremental de la aplicación **LlanquihueTourApp** para la asignatura de *Desarrollo Orientado a Objetos I*.
+Este proyecto corresponde a la Actividad Formativa de la Semana 7, la cual representa el desarrollo incremental de la aplicación **LlanquihueTourApp** para la asignatura de *Desarrollo Orientado a Objetos I*.
 
-Esta aplicación de consola sirve para administrar los datos del personal y los clientes de la agencia. También permite cargar una lista de tours desde un archivo de texto y buscarlos usando etiquetas. En esta entrega (Semana 6), sumamos la visualización y gestión de los diferentes servicios que ofrece la agencia (rutas gastronómicas, paseos por el lago y excursiones culturales), permitiendo ver en pantalla el detalle completo de cada servicio junto a su promoción correspondiente.
+Esta aplicación de consola sirve para administrar los datos del personal y los clientes de la agencia, cargar una lista de tours desde un archivo de texto y realizar búsquedas por etiquetas. También permite la gestión de los diferentes servicios especializados que ofrece la agencia (rutas gastronómicas, paseos por el lago y excursiones culturales). En esta entrega (Semana 7), el sistema agrupa todos estos servicios en una única lista para mostrarlos en pantalla de forma automática, identificando dinámicamente el tipo de actividad con su detalle específico (restricciones alimentarias, tipo de embarcación o lugar histórico) y desplegando la ficha de información completa de cada servicio.
 
-**¡Atención!** En Main.java la lógica de las semanas pasadas está comentada para que solo corra lo de la Semana 6. Para ver todo el funcionamiento anterior, retire los caracteres /* y */.
+**¡Atención!** En Main.java la lógica de las semanas pasadas está comentada para que solo corra lo de la Semana 7. Para ver todo el funcionamiento anterior, retire los caracteres /* y */.
 
 ---
 
@@ -25,11 +25,11 @@ Esta aplicación de consola sirve para administrar los datos del personal y los 
 
 ```plaintext
 📁 src/main/java/com/llanquihuetour/
-app/          # Paquete para la clase principal main.
-└── Main.java
+app/          # Paquete para la clase principal Main (equivalente a ui/).
+└── Main.java                # [MODIFICADO]
 data/         # Paquete para clases de lectura y persistencia de datos.
 ├── GestorDatos.java
-└── GestorServicios.java     # [NUEVO] Gestor de instancias de prueba para servicios.
+└── GestorServicios.java     # [MODIFICADO]
 model/        # Paquete para las clases de dominio y jerarquía de herencia.
 ├── Persona.java
 ├── Direccion.java
@@ -37,10 +37,10 @@ model/        # Paquete para las clases de dominio y jerarquía de herencia.
 ├── Empleado.java
 ├── Asociado.java
 ├── Tour.java
-├── ServicioTuristico.java   # [NUEVO] Superclase base de servicios.
-├── RutaGastronomica.java    # [NUEVO] Subclase especializada de gastronomía.
-├── PaseoLacustre.java       # [NUEVO] Subclase especializada de paseos en lago.
-└── ExcursionCultural.java   # [NUEVO] Subclase especializada de excursiones culturales.
+├── ServicioTuristico.java   # [MODIFICADO]
+├── RutaGastronomica.java    # [MODIFICADO]
+├── PaseoLacustre.java       # [MODIFICADO]
+└── ExcursionCultural.java   # [MODIFICADO]
 util/         # Paquete para utilidades, validaciones y excepciones.
 ├── ValidadorRut.java
 ├── RutInvalidoException.java
@@ -59,6 +59,7 @@ Este repositorio muestra la evolución incremental del proyecto semana a semana.
 * **Semana 4:** `Commit 2: LlanquihueTourApp.JaimeSeguel.Semana4` ("Construyendo una lista de objetos desde archivo")
 * **Semana 5:** `Commit 3: LlanquihueTourApp.JaimeSeguel.Semana5` ("Organización modular y creación de una librería personalizada")
 * **Semana 6:** `Commit 4: LlanquihueTourApp.JaimeSeguel.Semana6` ("Creando jerarquías de clases con herencia simple")
+* **Semana 7:** `Commit 5: LlanquihueTourApp.JaimeSeguel.Semana7` ("Aplicando polimorfismo y colecciones genéricas")
 
 *(Puedes ver el código de cada semana haciendo clic en el botón  "<>"  al lado del commit correspondiente).*
 
@@ -76,8 +77,8 @@ Este repositorio muestra la evolución incremental del proyecto semana a semana.
 ---
 
 **Repositorio GitHub:** [https://github.com/jamesAnimal/LlanquihueTourApp](https://github.com/jamesAnimal/LlanquihueTourApp)
-**Fecha de entrega límite (Semana 6):** 29/06/2026.
+**Fecha de entrega límite (Semana 7):** 06/07/2026.
 
 ---
 
-© Duoc UC | Escuela de Informática y Telecomunicaciones | Desarrollo Orientado a Objetos I | Avance Semana 6.
+© Duoc UC | Escuela de Informática y Telecomunicaciones | Desarrollo Orientado a Objetos I | Avance Semana 7.

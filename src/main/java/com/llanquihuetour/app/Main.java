@@ -10,8 +10,12 @@ import com.llanquihuetour.util.RutInvalidoException;
 import com.llanquihuetour.util.BuscadorTours;
 import com.llanquihuetour.data.GestorServicios;
 import com.llanquihuetour.model.ServicioTuristico;
+import com.llanquihuetour.model.RutaGastronomica;
+import com.llanquihuetour.model.PaseoLacustre;
+import com.llanquihuetour.model.ExcursionCultural;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -26,10 +30,9 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+
 /*
-        // ==========================================
-        // SEMANA 3: Registro de Personal y Clientes
-        // ==========================================
+        // SEMANA 3: Registro de Personal y Clientes.
 
         // Llama al Scanner.
         Scanner scan = new Scanner(System.in);
@@ -126,18 +129,14 @@ public class Main {
         System.out.println(cliente1.toString());
 
 
-        // ==========================================
-        // SEMANA 4: Carga de Tours desde Archivo
-        // ==========================================
+        // SEMANA 4: Carga de Tours desde Archivo.
 
         // Llama a la clase GestorDatos para leer el archivo .txt y guarda la lectura en una lista dinámica de objetos.
         GestorDatos gestor = new GestorDatos();
         ArrayList<Tour> listaTours = gestor.leerArchivo("src/main/resources/tours.txt");
 
 
-        // ==========================================
-        // SEMANA 5: Búsqueda Interactiva y Contratación
-        // ==========================================
+        // SEMANA 5: Búsqueda Interactiva y Contratación.
 
         // Ejecuta la búsqueda interactiva de tours usando la clase BuscadorTours.
         BuscadorTours.buscarTours(listaTours, scan);
@@ -172,16 +171,14 @@ public class Main {
 
         scan.close();
 
-*/
-        // ==========================================
-        // SEMANA 6: Servicios Turísticos Especializados
-        // ==========================================
+
+        // SEMANA 6: Servicios Turísticos Especializados.
 
         // Se crea un objeto de GestorServicios para poder llamar al método crearServiciosTuristicos.
         GestorServicios gestorServicios = new GestorServicios();
 
         // Se crea una lista para guardar lo que retorna el método crearServiciosTuristicos.
-        ArrayList<ServicioTuristico> listaDeServicios = gestorServicios.crearServiciosTuristicos();
+        List<ServicioTuristico> listaDeServicios = gestorServicios.crearServiciosTuristicos();
 
         // Se recorre la lista y se imprimen los tours uno por uno.
         System.out.println("\n" + "=====Servicios Turisticos=====" + "\n");
@@ -192,9 +189,42 @@ public class Main {
             System.out.println(servicio + "\n");
 
         }
+*/
 
+        // SEMANA 7: Aplicando polimorfismo y colecciones genéricas.
 
+        // Se crea un objeto de GestorServicios para poder llamar al método crearServiciosTuristicos.
+        GestorServicios gestorServicios = new GestorServicios();
 
+        // Se crea una lista para guardar lo que retorna el método crearServiciosTuristicos.
+        List<ServicioTuristico> listaDeServicios = gestorServicios.crearServiciosTuristicos();
+
+        // Ciclo para recorrer la lista y buscar objetos específicos usando instanceOF.
+        for (ServicioTuristico servicio : listaDeServicios) {
+
+            if (servicio instanceof RutaGastronomica) {
+
+                RutaGastronomica ruta = (RutaGastronomica) servicio;
+                System.out.println("===Ruta Gastronómica===");
+                System.out.println("Número de Paradas: " + ruta.getNumeroDeParadas()); //Downcasting.
+
+            } else if (servicio instanceof PaseoLacustre) {
+
+                PaseoLacustre paseo = (PaseoLacustre) servicio;
+                System.out.println("===Paseo Lacustre===");
+                System.out.println("Tipo de Embarcación: " + paseo.getTipoEmbarcacion()); //Downcasting.
+
+            } else if (servicio instanceof ExcursionCultural) {
+
+                ExcursionCultural excursion = (ExcursionCultural) servicio;
+                System.out.println("===Excursión Cultural===");
+                System.out.println("Lugar Histórico: " + excursion.getLugarHistorico()); //Downcasting.
+            }
+
+            // Se muestra el servicio ya identificado con el instanceOf usando el metodo mostrarInformacion.
+            servicio.mostrarInformacion();
+            System.out.println("\n");
+        }
 
     }
 }

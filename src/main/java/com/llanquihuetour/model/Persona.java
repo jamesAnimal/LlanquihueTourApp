@@ -81,7 +81,7 @@ public class Persona {
 
     /**
      * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
-     * @return Texto formateado con los datos del servicio.
+     * @return Texto formateado con los datos de la persona.
      */
     @Override 
     public String toString() {

@@ -77,6 +77,23 @@ public class ExcursionCultural extends ServicioTuristico {
                 lugarHistorico + " (" + super.getComuna() + ").";
     }
 
+    /**
+     * Método para mostrar la información completa de un servicio turístico tipo Excursión Cultural.
+     */
+    @Override
+    public void mostrarInformacion() {
+
+        System.out.println("===Excursión Cultural===");
+        System.out.println("Código: " + getCodigo());
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Duración Horas: " + getDuracionHoras());
+        System.out.println("Comuna: " + getComuna());
+        System.out.println("Precio: " + getPrecio());
+        System.out.println("Lugar Histórico: " + getLugarHistorico());
+        System.out.println("Idioma Guía: " + getIdiomaGuia());
+        System.out.println("Incluye Entradas: " + isIncluyeEntradas());
+
+    }
 
     /**
      * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
