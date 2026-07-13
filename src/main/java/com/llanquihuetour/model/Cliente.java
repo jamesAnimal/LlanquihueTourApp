@@ -1,7 +1,7 @@
 package com.llanquihuetour.model;
 
 /**
- * Clase que se extiende de la clase Persona para definir los métodos y atributos de un objeto cliente.
+ * Clase que se extiende de la clase abstracta Persona para definir los métodos y atributos de un objeto cliente.
  * @author Jaime Seguel.
  * @since Semana 3
  */
@@ -10,7 +10,6 @@ public class Cliente extends Persona {
     private String idioma;
     private int edad;
     private String contactoEmergencia;
-    private Tour tourContratado;
 
     /**
      * Constructor que inicializa el objeto con datos vacíos por defecto para luego ser rellenados.
@@ -21,11 +20,10 @@ public class Cliente extends Persona {
         this.idioma = "Sin registrar";
         this.edad = 0;
         this.contactoEmergencia = "Sin registrar";
-        this.tourContratado = null;
     }
 
     /**
-     * Constructor para inicializar el objeto con los datos agregados directamente.
+     * Constructor que inicializa el objeto con los datos agregados directamente.
      * @param idioma Idioma del cliente.
      * @param edad Edad del cliente.
      * @param contactoEmergencia Contacto de emergencia del cliente en caso de accidente.
@@ -33,15 +31,13 @@ public class Cliente extends Persona {
      * @param rut Rut del cliente.
      * @param fono Teléfono del cliente.
      * @param direccion Dirección del cliente, derivado de la clase Dirección.
-     * @param tourContratado Tour contratado por el cliente, derivado de la clase Tour.
      */
-    public Cliente(String idioma, int edad, String contactoEmergencia, String nombre, String rut, String fono, Direccion direccion, Tour tourContratado) {
+    public Cliente(String idioma, int edad, String contactoEmergencia, String nombre, String rut, String fono, Direccion direccion) {
 
         super(nombre, rut, fono, direccion);
         this.idioma = idioma;
         this.edad = edad;
         this.contactoEmergencia = contactoEmergencia;
-        this.tourContratado = tourContratado;
     }
 
     // Métodos setters y getters para crear el flujo de datos con los atributos privados.
@@ -69,31 +65,18 @@ public class Cliente extends Persona {
         this.contactoEmergencia = contactoEmergencia;
     }
 
-    public Tour getTourContratado() {
-        return tourContratado;
-    }
-
-    public void setTourContratado(Tour tourContratado) {
-        this.tourContratado = tourContratado;
-    }
-
     /**
      * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
      * @return Texto formateado con los datos del cliente.
      */
     @Override
     public String toString() {
-
-        String tourInfo = (tourContratado != null) 
-            ? tourContratado.getNombre() + " (Valor: $" + tourContratado.getValor() + ")" 
-            : "Ninguno";
         
         return "-----Datos del Cliente-----" + "\n"
                 + super.toString()
                 + "Edad: " + edad + "\n"
                 + "Idioma: " + idioma + "\n"
-                + "Contacto de Emergencia: " + contactoEmergencia + "\n"
-                + "Tour Contratado: " + tourInfo + "\n";
+                + "Contacto de Emergencia: " + contactoEmergencia + "\n";
 
     }
 

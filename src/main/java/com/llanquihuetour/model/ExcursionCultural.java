@@ -1,7 +1,7 @@
 package com.llanquihuetour.model;
 
 /**
- * Clase que se extiende de la clase ServicioTuristico para definir los métodos y atributos de un objeto ExcursionCultural.
+ * Clase que se extiende de la clase abstracta ServicioTuristico para definir los métodos y atributos de un objeto ExcursionCultural.
  * @author Jaime Seguel.
  * @since Semana 6
  */
@@ -33,7 +33,8 @@ public class ExcursionCultural extends ServicioTuristico {
      * @param idiomaGuia Idiomas que maneja el guía del servicio turístico.
      * @param incluyeEntradas Si el servicio turístico incluye las entradas a los lugares históricos o no.
      */
-    public ExcursionCultural(int codigo, String nombre, Double duracionHoras, String comuna, Double precio, String lugarHistorico, String idiomaGuia, boolean incluyeEntradas) {
+    public ExcursionCultural(int codigo, String nombre, Double duracionHoras, String comuna, Double precio,
+                             String lugarHistorico, String idiomaGuia, boolean incluyeEntradas) {
 
         super(codigo, nombre, duracionHoras, comuna, precio);
         this.lugarHistorico = lugarHistorico;
@@ -92,7 +93,19 @@ public class ExcursionCultural extends ServicioTuristico {
         System.out.println("Lugar Histórico: " + getLugarHistorico());
         System.out.println("Idioma Guía: " + getIdiomaGuia());
         System.out.println("Incluye Entradas: " + isIncluyeEntradas());
+    }
 
+    // Método para formatear el boolean a string.
+    public String incluyeEntradasFormateo() {
+
+        if (this.isIncluyeEntradas()) {
+
+            return "Sí";
+
+        } else  {
+
+            return "No";
+        }
     }
 
     /**
@@ -101,10 +114,11 @@ public class ExcursionCultural extends ServicioTuristico {
      */
     @Override
     public String toString() {
+
         return "=====Excursión Cultural=====" + "\n" +
                 super.toString() + "\n" +
                 "Lugar Histórico: " + lugarHistorico + "\n" +
                 "Idiomas del Guía: " + idiomaGuia + "\n" +
-                "Incluye Entradas: " + incluyeEntradas;
+                "Incluye Entradas: " + incluyeEntradasFormateo();
     }
 }

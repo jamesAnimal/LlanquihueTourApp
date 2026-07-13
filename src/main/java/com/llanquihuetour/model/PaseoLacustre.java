@@ -1,7 +1,7 @@
 package com.llanquihuetour.model;
 
 /**
- * Clase que se extiende de la clase ServicioTuristico para definir los métodos y atributos de un objeto PaseoLacustre.
+ * Clase que se extiende de la clase abstracta ServicioTuristico para definir los métodos y atributos de un objeto PaseoLacustre.
  * @author Jaime Seguel.
  * @since Semana 6
  */
@@ -33,7 +33,8 @@ public class PaseoLacustre extends ServicioTuristico {
      * @param permitePescar Si se permite pescar en el servicio turístico o no.
      * @param capacidadPasajeros Capacidad de pasajeros de la embarcación del servicio turístico.
      */
-    public PaseoLacustre(int codigo, String nombre, Double duracionHoras, String comuna, Double precio, String tipoEmbarcacion, boolean permitePescar, int capacidadPasajeros) {
+    public PaseoLacustre(int codigo, String nombre, Double duracionHoras, String comuna, Double precio,
+                         String tipoEmbarcacion, boolean permitePescar, int capacidadPasajeros) {
 
         super(codigo, nombre, duracionHoras, comuna, precio);
         this.tipoEmbarcacion = tipoEmbarcacion;
@@ -95,16 +96,30 @@ public class PaseoLacustre extends ServicioTuristico {
 
     }
 
+    // Método para formatear el boolean a string.
+    public String permisoPescaFormateo() {
+
+        if (this.isPermitePescar()) {
+
+            return "Sí";
+
+        } else  {
+
+            return "No";
+        }
+    }
+
     /**
      * Método que formatea y retorna los atributos de la clase para mostrarlos por consola.
      * @return Texto formateado con los datos del servicio.
      */
     @Override
     public String toString() {
+
         return "=====Paseo Lacustre=====" + "\n" +
                 super.toString() + "\n" +
                 "Tipo de Embarcación: " + tipoEmbarcacion + "\n" +
                 "Capacidad de Pasajeros: " + capacidadPasajeros + "\n" +
-                "Permite Pescar: " + permitePescar;
+                "Permite Pescar: " + permisoPescaFormateo();
     }
 }

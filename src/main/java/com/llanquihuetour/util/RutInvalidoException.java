@@ -12,6 +12,7 @@ public class RutInvalidoException extends Exception {
      * @param mensaje Mensaje con información del error.
      */
     public RutInvalidoException(String mensaje) {
+
         super(mensaje);
     }
 }

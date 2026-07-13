@@ -1,14 +1,14 @@
 package com.llanquihuetour.model;
 
 import com.llanquihuetour.util.RutInvalidoException;
-import com.llanquihuetour.util.ValidadorRut;
+import com.llanquihuetour.util.ValidadorGeneral;
 
 /**
  * Clase que define los métodos y atributos más básicos de las personas en la empresa.
  * @author Jaime Seguel.
  * @since Semana 3
  */
-public class Persona {
+public abstract class Persona {
 
     private String nombre;
     private String rut;
@@ -57,9 +57,11 @@ public class Persona {
     // Asigna el RUT validando su formato con la clase ValidadorRut y lanza RutInvalidoException si es incorrecto.
     public void setRut(String rut) throws RutInvalidoException {
 
-        if (!ValidadorRut.rutValido(rut)) {
+        if (!ValidadorGeneral.rutValido(rut)) {
+
             throw new RutInvalidoException("El RUT ingresado no es válido, inténtelo nuevamente.");
         }
+
         this.rut = rut;
     }
 
@@ -91,5 +93,4 @@ public class Persona {
                 + "Fono: " + fono + "\n"
                 + direccion;
     }
-
 }

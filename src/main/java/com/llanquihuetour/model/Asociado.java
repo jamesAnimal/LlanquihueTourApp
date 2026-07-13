@@ -1,11 +1,12 @@
 package com.llanquihuetour.model;
 
 /**
- * Clase que se extiende de la clase Persona para definir los métodos y atributos de un objeto asociado.
+ * Clase que se extiende de la clase abstracta Persona e implementa la interfaz Registrable
+ * para definir los métodos y atributos de un objeto Asociado.
  * @author Jaime Seguel.
  * @since Semana 3
  */
-public class Asociado extends Persona {
+public class Asociado extends Persona implements Registrable {
 
     private String servicio;
     private int tarifa;
@@ -23,7 +24,7 @@ public class Asociado extends Persona {
     }
 
     /**
-     * Constructor para inicializar el objeto con los datos agregados directamente.
+     * Constructor que inicializa el objeto con los datos agregados directamente.
      * @param servicio Servicio que entrega el asociado.
      * @param tarifa Tarifa del servicio del asociado.
      * @param observaciones Observaciones sobre el servicio del asociado.
@@ -63,6 +64,16 @@ public class Asociado extends Persona {
 
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
+    }
+
+    /**
+     * Método implementado desde Registrable.
+     * @return String con resumen del objeto.
+     */
+    @Override
+    public String mostrarResumen() {
+
+        return "Asociado: " + getNombre() + " (RUT: " + getRut() + ") | Servicio: " + servicio + " | Tarifa: $" + tarifa;
     }
 
     /**

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.llanquihuetour.ui.VentanaServicios">
+  <grid id="27dc6" binding="panelPrincipalServicios" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="800" height="600"/>
+    </constraints>
+    <properties>
+      <maximumSize width="800" height="600"/>
+      <minimumSize width="800" height="600"/>
+      <preferredSize width="800" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <!-- Título de Instrucciones 1 -->
+      <component id="instructions1" class="javax.swing.JLabel" binding="lblInstruccionesServicios1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="2" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Gestión de Servicios Turísticos"/>
+        </properties>
+      </component>
+
+      <!-- Título de Instrucciones 2 -->
+      <component id="instructions2" class="javax.swing.JLabel" binding="lblInstruccionesServicios2">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="2" left="10" bottom="10" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Complete el formulario superior para registrar y visualice la lista abajo."/>
+        </properties>
+      </component>
+
+      <!-- Panel del Formulario (Registro) -->
+      <grid id="panel_formulario" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <!-- Fila Superior: Selección de Tipo -->
+          <grid id="panel_tipo_selector" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="5" bottom="10" right="5" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="lbl_tipo" class="javax.swing.JLabel" binding="lblTipo">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Tipo Servicio:"/>
+                </properties>
+              </component>
+              <component id="cmbTipo" class="javax.swing.JComboBox" binding="cmbTipo">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="150" weightx="1.0" weighty="0.0"/>
+                </constraints>
+              </component>
+            </children>
+          </grid>
+
+          <!-- Formulario Izquierdo (4 Campos) -->
+          <grid id="panel_izq" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="lbl_codigo" class="javax.swing.JLabel" binding="lblCodigo">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Código:"/>
+                </properties>
+              </component>
+              <component id="txtCodigo" class="javax.swing.JTextField" binding="txtCodigo">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <toolTipText value="Ejemplo: 101"/>
+                </properties>
+              </component>
+              <component id="lbl_nombre" class="javax.swing.JLabel" binding="lblNombre">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Nombre:"/>
+                </properties>
+              </component>
+              <component id="txtNombre" class="javax.swing.JTextField" binding="txtNombre">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <toolTipText value="Ejemplo: Ruta del Kuchen"/>
+                </properties>
+              </component>
+              <component id="lbl_duracion" class="javax.swing.JLabel" binding="lblDuracion">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Duración (Horas):"/>
+                </properties>
+              </component>
+              <component id="txtDuracion" class="javax.swing.JTextField" binding="txtDuracion">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <toolTipText value="Ejemplo: 3.5"/>
+                </properties>
+              </component>
+              <component id="lbl_comuna" class="javax.swing.JLabel" binding="lblComuna">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Comuna:"/>
+                </properties>
+              </component>
+              <component id="txtComuna" class="javax.swing.JTextField" binding="txtComuna">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <toolTipText value="Ejemplo: Puerto Varas"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+
+          <!-- Formulario Derecho (4 Campos) -->
+          <grid id="panel_der" layout-manager="GridBagLayout">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="lbl_precio" class="javax.swing.JLabel" binding="lblPrecio">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Precio ($):"/>
+                </properties>
+              </component>
+              <component id="txtPrecio" class="javax.swing.JTextField" binding="txtPrecio">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <toolTipText value="Ejemplo: 25000"/>
+                </properties>
+              </component>
+              <component id="lbl_especifico1" class="javax.swing.JLabel" binding="lblEspecifico1">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Especifico 1:"/>
+                </properties>
+              </component>
+              <component id="txtEspecifico1" class="javax.swing.JTextField" binding="txtEspecifico1">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <toolTipText value="Ejemplo: Catamarán"/>
+                </properties>
+              </component>
+              <component id="lbl_especifico2" class="javax.swing.JLabel" binding="lblEspecifico2">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Especifico 2:"/>
+                </properties>
+              </component>
+              <component id="txtEspecifico2" class="javax.swing.JTextField" binding="txtEspecifico2">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <toolTipText value="Ejemplo: 50"/>
+                </properties>
+              </component>
+              <component id="lbl_especifico3" class="javax.swing.JLabel" binding="lblEspecifico3">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Especifico 3:"/>
+                </properties>
+              </component>
+              <component id="cmbEspecifico3" class="javax.swing.JComboBox" binding="cmbEspecifico3">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                </constraints>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+
+      <!-- Botón Registrar -->
+      <component id="btnRegistrar" class="javax.swing.JButton" binding="btnRegistrar">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="10" bottom="5" right="10" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Registrar Servicio"/>
+        </properties>
+      </component>
+
+      <!-- Panel de Filtro -->
+      <grid id="panelFiltro" binding="panelFiltro" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="lbl_filtro" class="javax.swing.JLabel" binding="lblFiltro">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Filtrar por Tipo:"/>
+            </properties>
+          </component>
+          <component id="cmbFiltro" class="javax.swing.JComboBox" binding="cmbFiltro">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+            </constraints>
+          </component>
+        </children>
+      </grid>
+
+      <!-- Área de Listado (Scroll) -->
+      <scrollpane id="scroll_servicios">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="txtAreaServicios" class="javax.swing.JTextArea" binding="txtAreaServicios">
+            <properties>
+              <editable value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+
+      <!-- Botón Volver -->
+      <component id="btnVolver" class="javax.swing.JButton" binding="btnVolver">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="15" right="10" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="&lt;- Volver al Menú Principal"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

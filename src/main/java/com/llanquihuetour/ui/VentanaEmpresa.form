@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.llanquihuetour.ui.VentanaEmpresa">
+  <grid id="27dc6" binding="panelPrincipalEmpresa" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="800" height="600"/>
+    </constraints>
+    <properties>
+      <maximumSize width="800" height="600"/>
+      <minimumSize width="800" height="600"/>
+      <preferredSize width="800" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="instructions1" class="javax.swing.JLabel" binding="lblInstruccionesEmpresa1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="2" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Gestión de la Empresa (Recursos Humanos y Recursos Físicos)"/>
+        </properties>
+      </component>
+      <component id="instructions2" class="javax.swing.JLabel" binding="lblInstruccionesEmpresa2">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="2" left="10" bottom="10" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Complete el formulario superior para registrar y visualice la lista abajo."/>
+        </properties>
+      </component>
+      <tabbedpane id="tabbedPrincipal" binding="tabbedPrincipal">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="tab_personas" binding="tabRecursosHumanos" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Recursos Humanos"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="panel_izq_pers" layout-manager="GridBagLayout">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="lbl_tipoPersona" class="javax.swing.JLabel" binding="lblTipoPersona">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Tipo:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbTipoPersona" class="javax.swing.JComboBox" binding="cmbTipoPersona">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="lbl_nombrePersona" class="javax.swing.JLabel" binding="lblNombrePersona">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Nombre Completo:"/>
+                    </properties>
+                  </component>
+                  <component id="txtNombrePersona" class="javax.swing.JTextField" binding="txtNombrePersona">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: Juan Perez Perez"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_rutPersona" class="javax.swing.JLabel" binding="lblRutPersona">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="RUT:"/>
+                    </properties>
+                  </component>
+                  <component id="txtRutPersona" class="javax.swing.JTextField" binding="txtRutPersona">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: 12345678-9 (sin puntos, con guión)"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_telefonoPersona" class="javax.swing.JLabel" binding="lblTelefonoPersona">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Teléfono:"/>
+                    </properties>
+                  </component>
+                  <component id="txtTelefonoPersona" class="javax.swing.JTextField" binding="txtTelefonoPersona">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: +56912345678"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_especificoPersona1" class="javax.swing.JLabel" binding="lblEspecificoPersona1">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Cargo:"/>
+                    </properties>
+                  </component>
+                  <component id="txtEspecificoPersona1" class="javax.swing.JTextField" binding="txtEspecificoPersona1">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: Guía Interno"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_especificoPersona3" class="javax.swing.JLabel" binding="lblEspecificoPersona3">
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Turno:"/>
+                    </properties>
+                  </component>
+                  <component id="txtEspecificoPersona3" class="javax.swing.JTextField" binding="txtEspecificoPersona3">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: Diurno"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="panel_der_pers" layout-manager="GridBagLayout">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="lbl_regionPersona" class="javax.swing.JLabel" binding="lblRegionPersona">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Región:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbRegionPersona" class="javax.swing.JComboBox" binding="cmbRegionPersona">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="lbl_ciudadPersona" class="javax.swing.JLabel" binding="lblCiudadPersona">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Ciudad:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbCiudadPersona" class="javax.swing.JComboBox" binding="cmbCiudadPersona">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="lbl_callePersona" class="javax.swing.JLabel" binding="lblCallePersona">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Calle:"/>
+                    </properties>
+                  </component>
+                  <component id="txtCallePersona" class="javax.swing.JTextField" binding="txtCallePersona">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: Pasaje principal"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_numeroPersona" class="javax.swing.JLabel" binding="lblNumeroPersona">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Número:"/>
+                    </properties>
+                  </component>
+                  <component id="txtNumeroPersona" class="javax.swing.JTextField" binding="txtNumeroPersona">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: 1234"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_especificoPersona2" class="javax.swing.JLabel" binding="lblEspecificoPersona2">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Sueldo ($):"/>
+                    </properties>
+                  </component>
+                  <component id="txtEspecificoPersona2" class="javax.swing.JTextField" binding="txtEspecificoPersona2">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: 750000"/>
+                    </properties>
+                  </component>
+                  <vspacer id="spacer_fill_pers">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <component id="btnRegistrarPersona" class="javax.swing.JButton" binding="btnRegistrarPersona">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="10" bottom="5" right="10" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Registrar Personal"/>
+                </properties>
+              </component>
+              <grid id="panelFiltroPersonas" binding="panelFiltroPersonas" layout-manager="GridBagLayout">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="lbl_filtro_pers" class="javax.swing.JLabel" binding="lblFiltroPersonas">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Filtrar por Tipo:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbFiltroPersonas" class="javax.swing.JComboBox" binding="cmbFiltroPersonas">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <scrollpane id="scroll_pers">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="1.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="txtAreaPersonas" class="javax.swing.JTextArea" binding="txtAreaPersonas">
+                    <constraints/>
+                    <properties>
+                      <editable value="false"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="tab_recursos" binding="tabRecursosFisicos" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Recursos Fisicos"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="panel_izq_rec" layout-manager="GridBagLayout">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="lbl_tipoRecurso" class="javax.swing.JLabel" binding="lblTipoRecurso">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Tipo Recurso:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbTipoRecurso" class="javax.swing.JComboBox" binding="cmbTipoRecurso">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="lbl_codigoRecurso" class="javax.swing.JLabel" binding="lblCodigoRecurso">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Código:"/>
+                    </properties>
+                  </component>
+                  <component id="txtCodigoRecurso" class="javax.swing.JTextField" binding="txtCodigoRecurso">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: 501"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_especificoRecurso1" class="javax.swing.JLabel" binding="lblEspecificoRecurso1">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Marca:"/>
+                    </properties>
+                  </component>
+                  <component id="txtEspecificoRecurso1" class="javax.swing.JTextField" binding="txtEspecificoRecurso1">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: Hyundai"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_especificoRecurso2" class="javax.swing.JLabel" binding="lblEspecificoRecurso2">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Modelo:"/>
+                    </properties>
+                  </component>
+                  <component id="txtEspecificoRecurso2" class="javax.swing.JTextField" binding="txtEspecificoRecurso2">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: H1"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_especificoRecurso3" class="javax.swing.JLabel" binding="lblEspecificoRecurso3">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Año:"/>
+                    </properties>
+                  </component>
+                  <component id="txtEspecificoRecurso3" class="javax.swing.JTextField" binding="txtEspecificoRecurso3">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: 2021"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_especificoRecurso4" class="javax.swing.JLabel" binding="lblEspecificoRecurso4">
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Patente:"/>
+                    </properties>
+                  </component>
+                  <component id="txtEspecificoRecurso4" class="javax.swing.JTextField" binding="txtEspecificoRecurso4">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: PPDD55"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_capacidad" class="javax.swing.JLabel" binding="lblCapacidad">
+                    <constraints>
+                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Capacidad Pasajeros:"/>
+                    </properties>
+                  </component>
+                  <component id="txtCapacidad" class="javax.swing.JTextField" binding="txtCapacidad">
+                    <constraints>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: 9"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="panel_der_rec" binding="panelDireccionRecurso" layout-manager="GridBagLayout">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="lbl_region_rec" class="javax.swing.JLabel" binding="lblRegionRecurso">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Región:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbRegionRecurso" class="javax.swing.JComboBox" binding="cmbRegionRecurso">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="lbl_ciudad_rec" class="javax.swing.JLabel" binding="lblCiudadRecurso">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Ciudad:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbCiudadRecurso" class="javax.swing.JComboBox" binding="cmbCiudadRecurso">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="lbl_calle_rec" class="javax.swing.JLabel" binding="lblCalleRecurso">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Calle:"/>
+                    </properties>
+                  </component>
+                  <component id="txtCalleRecurso" class="javax.swing.JTextField" binding="txtCalleRecurso">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: Pasaje principal"/>
+                    </properties>
+                  </component>
+                  <component id="lbl_numero_rec" class="javax.swing.JLabel" binding="lblNumeroRecurso">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Número:"/>
+                    </properties>
+                  </component>
+                  <component id="txtNumeroRecurso" class="javax.swing.JTextField" binding="txtNumeroRecurso">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <toolTipText value="Ejemplo: 1234"/>
+                    </properties>
+                  </component>
+                  <vspacer id="spacer_fill_rec">
+                    <constraints>
+                      <grid row="4" column="1" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <component id="btnRegistrarRecurso" class="javax.swing.JButton" binding="btnRegistrarRecurso">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="10" bottom="5" right="10" weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Registrar Recurso"/>
+                </properties>
+              </component>
+              <grid id="panelFiltroRecursos" binding="panelFiltroRecursos" layout-manager="GridBagLayout">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="lbl_filtro_rec" class="javax.swing.JLabel" binding="lblFiltroRecursos">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Filtrar por Tipo:"/>
+                    </properties>
+                  </component>
+                  <component id="cmbFiltroRecursos" class="javax.swing.JComboBox" binding="cmbFiltroRecursos">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag top="3" left="3" bottom="3" right="3" weightx="1.0" weighty="0.0"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <scrollpane id="scroll_rec">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag top="5" left="10" bottom="5" right="10" weightx="1.0" weighty="1.0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="txtAreaRecursos" class="javax.swing.JTextArea" binding="txtAreaRecursos">
+                    <constraints/>
+                    <properties>
+                      <editable value="false"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+      <component id="btnVolver" class="javax.swing.JButton" binding="btnVolver">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="15" right="10" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="&lt;- Volver al Menú Principal"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
+

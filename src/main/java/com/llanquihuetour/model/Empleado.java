@@ -1,15 +1,16 @@
 package com.llanquihuetour.model;
 
 /**
- * Clase que se extiende de la clase Persona para definir los métodos y atributos de un objeto empleado.
+ * Clase que se extiende de la clase abstracta Persona e implementa la interfaz Registrable
+ * para definir los métodos y atributos de un objeto Empleado.
  * @author Jaime Seguel.
  * @since Semana 3
  */
-public class Empleado extends Persona {
+public class Empleado extends Persona implements Registrable {
 
     private String cargo;
     private String turno;
-    private int sueldo;
+    private Double sueldo;
 
     /**
      * Constructor que inicializa el objeto con datos vacíos por defecto para luego ser rellenados.
@@ -19,11 +20,11 @@ public class Empleado extends Persona {
         super();
         this.cargo = "Sin registrar";
         this.turno = "Sin registrar";
-        this.sueldo = 0;
+        this.sueldo = 0.0;
     }
 
     /**
-     * Constructor para inicializar el objeto con los datos agregados directamente.
+     * Constructor que inicializa el objeto con los datos agregados directamente.
      * @param cargo Cargo del empleado.
      * @param turno Turno del empleado.
      * @param sueldo Sueldo del empleado.
@@ -32,7 +33,7 @@ public class Empleado extends Persona {
      * @param fono Teléfono del empleado.
      * @param direccion Dirección del empleado, derivado de la clase Dirección.
      */
-    public Empleado(String cargo, String turno, int sueldo, String nombre, String rut, String fono, Direccion direccion) {
+    public Empleado(String cargo, String turno, Double sueldo, String nombre, String rut, String fono, Direccion direccion) {
 
         super(nombre, rut, fono, direccion);
         this.cargo = cargo;
@@ -57,12 +58,22 @@ public class Empleado extends Persona {
         this.turno = turno;
     }
 
-    public int getSueldo() {
+    public Double getSueldo() {
         return sueldo;
     }
 
-    public void setSueldo(int sueldo) {
+    public void setSueldo(Double sueldo) {
         this.sueldo = sueldo;
+    }
+
+    /**
+     * Método implementado desde Registrable.
+     * @return String con resumen del objeto.
+     */
+    @Override
+    public String mostrarResumen() {
+
+        return "Empleado: " + getNombre() + " (RUT: " + getRut() + ") | Cargo: " + cargo + " | Sueldo: $" + sueldo;
     }
 
     /**

@@ -5,7 +5,7 @@ package com.llanquihuetour.model;
  * @author Jaime Seguel.
  * @since Semana 6
  */
-public class ServicioTuristico {
+public abstract class ServicioTuristico {
 
     private int codigo;
     private String nombre;
@@ -34,6 +34,7 @@ public class ServicioTuristico {
      * @param precio Precio del servicio turístico.
      */
     public ServicioTuristico(int codigo, String nombre, Double duracionHoras, String comuna, Double precio) {
+
         this.codigo = codigo;
         this.nombre = nombre;
         this.duracionHoras = duracionHoras;
@@ -111,6 +112,7 @@ public class ServicioTuristico {
      */
     @Override
     public String toString() {
+
         return  "Código de Tour: " + codigo + "\n" +
                 "Nombre del Tour: " + nombre + "\n" +
                 "Duración en Horas: " + duracionHoras + "\n" +

@@ -1,7 +1,7 @@
 package com.llanquihuetour.model;
 
 /**
- * Clase que se extiende de la clase ServicioTuristico para definir los métodos y atributos de un objeto RutaGastronomica.
+ * Clase que se extiende de la clase abstracta ServicioTuristico para definir los métodos y atributos de un objeto RutaGastronomica.
  * @author Jaime Seguel.
  * @since Semana 6
  */
@@ -33,7 +33,9 @@ public class RutaGastronomica extends ServicioTuristico {
      * @param opcionVegetariana Si el servicio turístico tiene opción vegetariana o no.
      * @param condicionAlimentaria Qué condiciones de salud alimentaria tiene el servicio turístico.
      */
-    public RutaGastronomica(int codigo, String nombre, Double duracionHoras, String comuna, Double precio, int numeroDeParadas, boolean opcionVegetariana, String condicionAlimentaria) {
+    public RutaGastronomica(int codigo, String nombre, Double duracionHoras, String comuna, Double precio,
+                            int numeroDeParadas, boolean opcionVegetariana, String condicionAlimentaria) {
+
         super(codigo, nombre, duracionHoras, comuna, precio);
         this.numeroDeParadas = numeroDeParadas;
         this.opcionVegetariana = opcionVegetariana;
@@ -92,7 +94,19 @@ public class RutaGastronomica extends ServicioTuristico {
         System.out.println("Número de Paradas: " + getNumeroDeParadas());
         System.out.println("Opción Vegetariana: " + isOpcionVegetariana());
         System.out.println("Condición Alimentaria: " + getCondicionAlimentaria());
+    }
 
+    // Método para formatear el boolean a string.
+    public String opcionVegetarianFormateo() {
+
+        if (this.isOpcionVegetariana()) {
+
+            return "Sí";
+
+        } else  {
+
+            return "No";
+        }
     }
 
     /**
@@ -101,10 +115,11 @@ public class RutaGastronomica extends ServicioTuristico {
      */
     @Override
     public String toString() {
+
         return  "=====Ruta Gastronómica=====" + "\n" +
                 super.toString() + "\n" +
                 "Número de Paradas: " + numeroDeParadas + "\n" +
-                "Opción Vegetariana: " + opcionVegetariana + "\n" +
+                "Opción Vegetariana: " + opcionVegetarianFormateo() + "\n" +
                 "Condición Alimentaria: " + condicionAlimentaria;
     }
 }
